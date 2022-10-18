@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Online Food Delivery Service | MyParcel.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Edu+SA+Beginner&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NavBar CSS */
+        #navbar {
+            background-color: black;
+            display: flex;
+            opacity: 0.6;
+            align-items: center;
+
+        }
+
+        #logo img {
+            height: 80px;
+            width: 90px;
+            margin: 4px 10px;
+            padding: 0px 7px
+        }
+
+        #navbar ul {
+            font-family: 'Baloo Bhai 2', cursive;
+            display: flex;
+            margin: 4px 17px;
+        }
+
+        #navbar ul li {
+
+            list-style: none;
+
+        }
+
+        #navbar ul li a {
+            color: white;
+            display: block;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 0px 50px;
+            margin: 18px 27px;
+            border-style: 10px;
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 3px 200px;
+            height: 550px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home::before {
+            content: "";
+            position: absolute;
+            background: url('https://cdn.pixabay.com/photo/2017/06/06/22/46/mediterranean-cuisine-2378758_960_720.jpg') no-repeat center center/cover;
+            height: 642px;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.89;
+        }
+
+        #home h1 {
+            color: rgb(85, 78, 69);
+            text-align: center;
+            font-family: 'Edu SA Beginner', cursive;
+        }
+
+        #home p {
+            color: rgb(247, 241, 234);
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: 'Edu SA Beginner', cursive;
+        }
+
+        /* Services CSS */
+        #services {
+            margin: 34px;
+            display: flex;
+
+        }
+
+        #services .box {
+            border: 2px solid #ff5400;
+            margin: 3px 6px;
+            padding: 14px;
+            border-radius: 20px;
+            background-color: #f3f3ef;
+        }
+
+        #services .box img {
+            height: 190px;
+            display: block;
+            width: 264px;
+            margin: auto;
+            border-radius: 20px;
+        }
+
+        #services .box p {
+            font-family: 'Baloo Bhai 2', cursive;
+            font-weight: bold;
+        }
+
+        /* ClientSection */
+        #clients {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ccb9b0;
+        }
+
+        #microsoft {
+            height: 228px;
+            width: 220px;
+        }
+
+        #twitter {
+            height: 224px;
+            width: 232px;
+        }
+
+        #meta{
+            height: 224px;
+            width: 232px;
+        }
+
+        .client-item {
+            padding: 4px 20px;
+            margin: 9px 15px;
+        }
+
+        #footer h2 {
+            background-color: #504945;
+            ;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 1.8rem;
+            padding: 12px;
+            color: white;
+        }
+
+
+
+        /* Utility Classes */
+        .h-primary {
+            font-family: 'Edu SA Beginner', cursive;
+            font-size: 3.8rem;
+            padding: 12px;
+        }
+
+        .h-secondary {
+            font-family: 'Edu SA Beginner', cursive;
+            font-size: 2.2rem;
+            padding: 12px;
+        }
+
+        .btn {
+            padding: 6px 20px;
+            border: 2px solid white;
+            background-color: #dab0b0;
+            color: white;
+            margin: 17px;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://s3.amazonaws.com/thumbnails.venngage.com/template/9f596769-790d-4b5f-bb80-668016a9c920.png"
+                alt="MyParcel.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#service">Services</a></li>
+            <li class="item"><a href="#client-section">Our Clients</a></li>
+            <li class="item"><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome to MyParcel.com</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque esse, voluptate et incidunt nostrum quod sit
+            culpa ipsam.
+            hello how are you
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, reiciendis.</p>
+        <button class="btn">Order Now</button>
+    </section>
+    <section class="services-container" id="service">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="https://cdn.pixabay.com/photo/2018/06/29/08/15/doodle-3505459_960_720.png" alt="">
+                <h2 class="h-secondary center">Food Catering</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magni illo et tempore
+                    reprehenderit labore perferendis dolores, voluptatum quod soluta quia eum cupiditate nihil quo optio
+                    ullam rerum minima? Accusamus architecto libero omnis eveniet.</p>
+            </div>
+            <div class="box">
+                <img src="https://t4.ftcdn.net/jpg/03/32/79/91/360_F_332799148_55PKYZ6OkLWfuQTTZ0jeD8gzNnweZ0mU.jpg"
+                    alt="">
+                <h2 class="h-secondary center">Bulk Ordering</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magni illo et tempore
+                    reprehenderit labore perferendis dolores, voluptatum quod soluta quia eum cupiditate nihil quo optio
+                    ullam rerum minima? Accusamus architecto libero omnis eveniet.</p>
+            </div>
+            <div class="box">
+                <img src="https://cdn.pixabay.com/photo/2020/06/08/16/49/pizza-5275191_960_720.jpg" alt="">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magni illo et tempore
+                    reprehenderit labore perferendis dolores, voluptatum quod soluta quia eum cupiditate nihil quo optio
+                    ullam rerum minima? Accusamus architecto libero omnis eveniet.</p>
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h2 class="h-primary center">Our Clients</h2>
+        <div id="clients">
+            <div class="client-item">
+                <img src="data:image/jpeg;base64,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"
+                    alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="https://cdn3.vectorstock.com/i/1000x1000/04/22/skype-logo-icon-vector-27990422.jpg"
+                    alt="Our Client" id="microsoft">
+            </div>
+            <div class="client-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Our Client" id="twitter">
+            </div>
+            <div class="client-item">
+                <img src="https://blog.logomyway.com/wp-content/uploads/2021/11/meta-logo.png" alt="Our Client" id="meta">
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <h2 class="center">Copyright Hritik@MyParcel.com | All Rights Reserved</h2>
+    </footer>
+</body>
+
+</html>

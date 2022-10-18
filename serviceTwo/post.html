@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiley</title>
+   <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+h1 {
+    color: aliceblue;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.container {
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 348px;
+    width: 348px;
+    background-color: #FFF533;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.face .eyes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background-color: #FFF533;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+    z-index: 0;
+    margin: 0px 15px;
+}
+
+.eye {
+    display: flex;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    top: 10px;
+    top: -45px;
+    padding: 0px 52px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.eyes .eye::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+    left: 10px;
+    position: absolute;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+    background-color: black;
+    z-index: 1;
+}
+
+.face::before {
+    content: "";
+    height: 95px;
+    width: 230px;
+    /* border: 2px solid black; */
+    position: absolute;
+    background-color: chocolate;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    top: 230px;
+    z-index: 5;
+    outline: none;
+}
+
+.face:hover::before {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    top: 250px;
+    height: 45px;
+    width: 200px;
+    transition-duration: 0.6s;
+}
+   </style>
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <h1>Be happy with My Smile</h1>
+        </center>
+        <div class="face">
+            <div class="eyes">
+                <div class="eye"></div>
+                <div class="eye"></div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        document.querySelector("body").addEventListener("mousemove", eyeball);
+
+        function eyeball() {
+            var eye = document.querySelectorAll(".eye");
+
+            eye.forEach(function(eye) {
+
+                let x = eye.getBoundingClientRect().left + eye.clientWidth / 2;
+                let y = eye.getBoundingClientRect().top + eye.clientHeight / 2;
+                let x1 = event.pageX;
+                let x2 = event.pageY;
+
+                let radian = Math.atan2(x1 - x, x2 - y);
+                let rot = (radian * 180 / Math.PI) * -1 + 270;
+
+                eye.style.transform = "rotate(" + rot + "deg)";
+            });
+        }
+    </script>
+</body>
+
+</html>
